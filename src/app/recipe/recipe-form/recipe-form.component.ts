@@ -12,4 +12,7 @@ export class RecipeFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  // onSubmit() {
+  //   console.log.('submitted');
+  // }
 }
