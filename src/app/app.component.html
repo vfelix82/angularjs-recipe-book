@@ -1,41 +1,17 @@
-
-<app-recipe-form></app-recipe-form>
-<app-recipe-details></app-recipe-details>
-
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <div class="form-group">
-          <label for="recipename">Enter Name of Recipe:</label>
-
-          <input
-          type="text"
-          class="form-control"
-          ngModel
-          name="recipename">
-
-          <br>
-          <label for="linkofpicture">Enter Link of Picture:</label>
-          <input
-          type="text"
-          class="form-control"
-          ngModel
-          name="linkofpicture">
-
-          <br>
-          <label for="Description">Enter Description:</label>
-          <input
-          type="text"
-          class="form-control"
-          ngModel
-          name="description">
-
-          <button type="submit" name="btn btn-primary">submit</button>
-
+      <div class="jumbotron">
+        <h1>Favorite Recipes</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- <img src="http://www.alaskafit.com/wp-content/uploads/2017/02/Recipes-Banner.jpg" class="center" alt="recipe picture"> -->
         </div>
-      </form>
-      <p>{{ recipename }}</p>
+      </div>
     </div>
   </div>
 </div>
+<app-recipe-edit><app-recipe-edit>
+<app-recipe-details></app-recipe-details>

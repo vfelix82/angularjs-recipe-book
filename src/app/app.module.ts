@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 import { RecipeEditComponent } from './recipe/recipe-edit/recipe-edit.component';
 import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
-import { RecipeFormComponent } from './recipe/recipe-form/recipe-form.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -18,7 +17,8 @@ import { RecipeFormComponent } from './recipe/recipe-form/recipe-form.component'
     RecipeDetailsComponent,
     RecipeEditComponent,
     RecipeListComponent,
-    RecipeFormComponent
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,

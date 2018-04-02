@@ -8,7 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-  onSubmit(form: ElementRef) {
-    console.log(form);
-  }
 }

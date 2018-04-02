@@ -1,3 +1,53 @@
-<p>
-  recipe-edit works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+
+        <div
+          id="user-data"
+          ngModelGroup="userData"
+          #userData="ngModelGroup">
+
+        <div class="form-group">
+          <label for="recipename">Enter Name of Recipe:</label>
+          <input
+          type="text"
+          id="recipename"
+          class="form-control"
+          ngModel
+          name="recipename"
+          required>
+
+          <br>
+          <label for="linkofpicture">Enter Link of Picture:</label>
+          <input
+          type="text"
+          id="linkofpicture"
+          class="form-control"
+          ngModel
+          name="linkofpicture"
+          required>
+
+          <br>
+          <label for="description">Enter Description:</label>
+          <input
+          type="text"
+          id="description"
+          class="form-control"
+          ngModel
+          name="description"
+          required>
+
+          <br>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+
+        </div>
+      </div>
+      </form>
+    </div>
+    <p>{{ user.recipename }}</p>
+    <p>{{ user.linkofpicture }}</p>
+    <p>{{ user.description }}</p>
+  </div>
+</div>
