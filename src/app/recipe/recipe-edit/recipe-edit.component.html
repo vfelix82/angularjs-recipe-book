@@ -36,19 +36,9 @@
           <button
           type="submit"
           class="btn btn-primary btn-lg">Submit</button>
-
-      </div>
+        </div>
       </form>
-      <hr>
-      <ul class="list-group">
-        <a
-          class="list-group-item"
-          style="cursor: pointer"
-          *ngFor="let recipe of recipes"
-          >
-          {{ recipe.recipename }}
-        </a>
-      </ul>
+      <app-recipe-list></app-recipe-list>
     </div>
   </div>
 </div>
