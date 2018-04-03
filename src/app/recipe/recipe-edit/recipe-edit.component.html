@@ -1,13 +1,9 @@
 <div class="container">
   <div class="row">
+
     <div class="col-md-12">
 
-      <form (ngSubmit)="onSubmit()" #f="ngForm">
-
-        <div
-          id="user-data"
-          ngModelGroup="userData"
-          #userData="ngModelGroup">
+      <form (ngSubmit)="onAddItem(f)" #f="ngForm">
 
         <div class="form-group">
           <label for="recipename">Enter Name of Recipe:</label>
@@ -15,9 +11,8 @@
           type="text"
           id="recipename"
           class="form-control"
-          ngModel
           name="recipename"
-          required>
+          ngModel>
 
           <br>
           <label for="linkofpicture">Enter Link of Picture:</label>
@@ -25,9 +20,8 @@
           type="text"
           id="linkofpicture"
           class="form-control"
-          ngModel
           name="linkofpicture"
-          required>
+          ngModel>
 
           <br>
           <label for="description">Enter Description:</label>
@@ -35,19 +29,26 @@
           type="text"
           id="description"
           class="form-control"
-          ngModel
           name="description"
-          required>
+          ngModel>
 
           <br>
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          <button
+          type="submit"
+          class="btn btn-primary btn-lg">Submit</button>
 
-        </div>
       </div>
       </form>
+      <hr>
+      <ul class="list-group">
+        <a
+          class="list-group-item"
+          style="cursor: pointer"
+          *ngFor="let recipe of recipes"
+          >
+          {{ recipe.recipename }}
+        </a>
+      </ul>
     </div>
-    <p>{{ user.recipename }}</p>
-    <p>{{ user.linkofpicture }}</p>
-    <p>{{ user.description }}</p>
   </div>
 </div>

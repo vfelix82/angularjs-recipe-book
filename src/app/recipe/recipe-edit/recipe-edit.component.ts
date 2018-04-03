@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+
+import { Recipe } from './../recipe.model';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -8,24 +10,16 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./recipe-edit.component.css']
 })
 export class RecipeEditComponent implements OnInit {
-  @ViewChild('f') signupForm: NgForm;
-
-  user = {
-    recipename: "",
-    linkofpicture: "",
-    description: "",
-
-  };
 
   constructor() { }
 
   ngOnInit() {
-  };
+  }
 
-  onSubmit() {
-    this.user.recipename = this.signupForm.value.userData.recipename;
-    this.user.linkofpicture = this.signupForm.value.userData.linkofpicture;
-    this.user.description = this.signupForm.value.userData.description;
+  onAddItem(form: NgForm) {
+    console.log(form)
+    const value = form.value;
+    const newRecipe = new Recipe(value.recipename, value.linkofpicture, value.description);
 
   }
 }

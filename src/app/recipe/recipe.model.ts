@@ -1,11 +1,12 @@
 export class Recipe {
   public name: string;
-  public description: string;
   public imagePath: string;
+  public description: string;
 
-  constructor(name: string, desc: string, imagePath: string) {
+
+  constructor(name: string, imagePath: string, description: string,) {
     this.name = name;
-    this.description = desc;
     this.imagePath = imagePath;
+    this.description = description;
   }
 }
